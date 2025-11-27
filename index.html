@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VanshVoyages — Travel Agency</title>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <div class="logo">V</div>
+        <div>
+          <h1 style="margin:0;"><a href="#contact" class="site-title-link">VanshVoyages</a></h1>
+          <p class="tagline">Travel Agency</p>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#packages">Packages</a>
+        <a href="#itinerary">Itinerary</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-text">
+        <h2>Simple, clear and well-planned trips designed for real travelers.</h2>
+        <p class="small">Travel made smoother with curated routes and thoughtful support.</p>
+        <a class="btn" href="#packages">See Packages</a>
+      </div>
+
+      <div class="hero-card" aria-labelledby="quick-search">
+        <h4 id="quick-search" style="margin:0 0 8px 0;">Quick Search</h4>
+        <form class="mini-form" onsubmit="event.preventDefault(); alert('Search demo — no backend');" role="search">
+          <input type="text" placeholder="From (city or airport)" required aria-label="From">
+          <input type="text" placeholder="To (destination)" required aria-label="To">
+          <div class="row" style="display:flex;gap:8px;">
+            <input type="date" required aria-label="Depart date">
+            <select aria-label="Travellers">
+              <option>1 traveller</option>
+              <option>2 travellers</option>
+              <option>3+ travellers</option>
+            </select>
+          </div>
+          <button class="btn" type="submit" style="display:block;margin-top:8px;">Search</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN -->
+  <main>
+    <!-- PACKAGES -->
+    <section id="packages" class="wrap section">
+      <h2>Popular Packages</h2>
+      <p class="small">Curated short and medium itineraries for students, couples and families.</p>
+
+      <div class="cards" id="packages-list">
+
+        <!-- Maldives -->
+        <article class="card">
+          <img src="Maldives.jpg" alt="Maldives beach">
+          <div class="card-body">
+            <h3>Maldives Escape — 5 Days</h3>
+            <p class="small">White-sand beaches, snorkeling and island relaxation.</p>
+            <div class="card-foot">
+              <span class="price">From ₹49,999</span>
+              <div>
+                <button class="btn-sm details-btn"
+                  data-title="Maldives Escape — 5 Days"
+                  data-price="₹49,999"
+                  data-duration="5 days"
+                  data-desc="Stay at a seaside resort with daily breakfast, two guided snorkeling trips and island hopping."
+                  data-includes="Return transfers, 4-star resort, snorkeling gear, local guide"
+                >Details</button>
+
+                <button class="btn-sm outline book-btn" data-title="Maldives Escape — 5 Days">Book</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Himalayas -->
+        <article class="card">
+          <img src="Himalayas.jpg" alt="Himalayan mountains">
+          <div class="card-body">
+            <h3>Himalayan Trek — 8 Days</h3>
+            <p class="small">Guided treks, village stays and nature immersion.</p>
+            <div class="card-foot">
+              <span class="price">From ₹29,999</span>
+              <div>
+                <button class="btn-sm details-btn"
+                  data-title="Himalayan Trek — 8 Days"
+                  data-price="₹29,999"
+                  data-duration="8 days"
+                  data-desc="Guided treks across scenic trails, village homestays, and cultural interactions."
+                  data-includes="Local guide, campsite/guesthouse stays, three meals/day on trek"
+                >Details</button>
+
+                <button class="btn-sm outline book-btn" data-title="Himalayan Trek — 8 Days">Book</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Europe -->
+        <article class="card">
+          <img src="Europe.jpg" alt="European city - cafes and streets">
+          <div class="card-body">
+            <h3>Europe Highlights — 10 Days</h3>
+            <p class="small">Paris, Rome, Amsterdam — comfortable trains & iconic sights.</p>
+            <div class="card-foot">
+              <span class="price">From ₹99,999</span>
+              <div>
+                <button class="btn-sm details-btn"
+                  data-title="Europe Highlights — 10 Days"
+                  data-price="₹99,999"
+                  data-duration="10 days"
+                  data-desc="Multi-city rail-based trip covering Paris, Amsterdam, Berlin, Rome — guided highlights and free time."
+                  data-includes="Intercity rail, selected hotels, city tours, breakfast"
+                >Details</button>
+
+                <button class="btn-sm outline book-btn" data-title="Europe Highlights — 10 Days">Book</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Thailand -->
+        <article class="card">
+          <img src="Thailand.jpg" alt="Thailand beach">
+          <div class="card-body">
+            <h3>Thailand Beaches — 6 Days</h3>
+            <p class="small">Bangkok street food, Phuket islands and temples.</p>
+            <div class="card-foot">
+              <span class="price">From ₹34,999</span>
+              <div>
+                <button class="btn-sm details-btn"
+                  data-title="Thailand Beaches — 6 Days"
+                  data-price="₹34,999"
+                  data-duration="6 days"
+                  data-desc="Island hopping, street food tours and temple visits with comfortable hotel stays."
+                  data-includes="AC transfers, hotels, guided food walk"
+                >Details</button>
+
+                <button class="btn-sm outline book-btn" data-title="Thailand Beaches — 6 Days">Book</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Japan -->
+        <article class="card">
+          <img src="Japan.jpg" alt="Japan cherry blossoms">
+          <div class="card-body">
+            <h3>Japan Explorer — 7 Days</h3>
+            <p class="small">Tokyo lights, Kyoto temples and food markets.</p>
+            <div class="card-foot">
+              <span class="price">From ₹79,999</span>
+              <div>
+                <button class="btn-sm details-btn"
+                  data-title="Japan Explorer — 7 Days"
+                  data-price="₹79,999"
+                  data-duration="7 days"
+                  data-desc="City-to-city travel with guided experiences in Tokyo and Kyoto; cultural workshops optional."
+                  data-includes="Selected hotels, city tours, local guide"
+                >Details</button>
+
+                <button class="btn-sm outline book-btn" data-title="Japan Explorer — 7 Days">Book</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- New York -->
+        <article class="card">
+          <img src="NYC.jpg" alt="New York Skyline">
+          <div class="card-body">
+            <h3>New York City — 5 Days</h3>
+            <p class="small">City sightseeing, museums and optional Broadway.</p>
+            <div class="card-foot">
+              <span class="price">From ₹89,999</span>
+              <div>
+                <button class="btn-sm details-btn"
+                  data-title="New York City — 5 Days"
+                  data-price="₹89,999"
+                  data-duration="5 days"
+                  data-desc="City highlights, museum passes and guided Manhattan walk."
+                  data-includes="Hotel, guided tour, some museum entries"
+                >Details</button>
+
+                <button class="btn-sm outline book-btn" data-title="New York City — 5 Days">Book</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Iceland -->
+        <article class="card">
+          <img src="Iceland.jpg" alt="Iceland landscape">
+          <div class="card-body">
+            <h3>Iceland Nature Tour — 6 Days</h3>
+            <p class="small">Glaciers, waterfalls and northern lights (seasonal).</p>
+            <div class="card-foot">
+              <span class="price">From ₹89,999</span>
+              <div>
+                <button class="btn-sm details-btn"
+                  data-title="Iceland Nature Tour — 6 Days"
+                  data-price="₹89,999"
+                  data-duration="6 days"
+                  data-desc="Small-group tours visiting major natural sights; Northern Lights viewing in season."
+                  data-includes="Guided transfers, accommodation, some meals"
+                >Details</button>
+
+                <button class="btn-sm outline book-btn" data-title="Iceland Nature Tour — 6 Days">Book</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- South Africa -->
+        <article class="card">
+          <img src="SouthAfrica.jpg" alt="South Africa safari">
+          <div class="card-body">
+            <h3>South Africa Safari — 7 Days</h3>
+            <p class="small">Safari drives, coastal towns and wildlife.</p>
+            <div class="card-foot">
+              <span class="price">From ₹94,999</span>
+              <div>
+                <button class="btn-sm details-btn"
+                  data-title="South Africa Safari — 7 Days"
+                  data-price="₹94,999"
+                  data-duration="7 days"
+                  data-desc="Guided safari drives, coastal stops and cultural experiences."
+                  data-includes="Safari drives, lodge stays, selected meals"
+                >Details</button>
+
+                <button class="btn-sm outline book-btn" data-title="South Africa Safari — 7 Days">Book</button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ITINERARY -->
+    <section id="itinerary" class="wrap section">
+      <h2>Sample Itinerary — Europe Highlights (10 days)</h2>
+      <p class="small">A comfortable route that mixes iconic sights with local experiences.</p>
+
+      <ol>
+        <li><strong>Day 1:</strong> Arrive in Paris — city walk & Seine evening.</li>
+        <li><strong>Day 2:</strong> Paris — Louvre, Eiffel & local markets.</li>
+        <li><strong>Day 3:</strong> Eurostar to Amsterdam — canals & museums.</li>
+        <li><strong>Day 4:</strong> Amsterdam — bike tour and local food.</li>
+        <li><strong>Day 5:</strong> Travel to Berlin — history & cafés.</li>
+        <li><strong>Day 6:</strong> Berlin to Rome — evening in Trastevere.</li>
+        <li><strong>Day 7:</strong> Rome — Colosseum, Vatican & cuisine.</li>
+        <li><strong>Day 8:</strong> Florence — galleries & city walks.</li>
+        <li><strong>Day 9:</strong> Venice — canals & St Mark's.</li>
+        <li><strong>Day 10:</strong> Departure & return home.</li>
+      </ol>
+    </section>
+
+    <hr class="divider">
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="wrap section">
+      <h2>Traveler Reviews</h2>
+      <p class="small">Short, realistic testimonials to show on the site.</p>
+
+      <div class="cards cards--testi">
+        <article class="small-card card">
+          <div class="card-body">
+            <strong>Asha R.</strong>
+            <p class="small">"VanshVoyages managed everything smoothly — excellent local guides."</p>
+          </div>
+        </article>
+
+        <article class="small-card card">
+          <div class="card-body">
+            <strong>Rohit K.</strong>
+            <p class="small">"Booking was simple and support was available 24/7."</p>
+          </div>
+        </article>
+
+        <article class="small-card card">
+          <div class="card-body">
+            <strong>Simran P.</strong>
+            <p class="small">"Well-paced itinerary and very helpful staff."</p>
+          </div>
+        </article>
+
+        <article class="small-card card">
+          <div class="card-body">
+            <strong>Aditya M.</strong>
+            <p class="small">"Clear instructions and thoughtful planning — recommended."</p>
+          </div>
+        </article>
+
+        <article class="small-card card">
+          <div class="card-body">
+            <strong>Neha S.</strong>
+            <p class="small">"Local experiences were the highlight — highly recommended."</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ABOUT -->
+    <section id="about" class="wrap section">
+      <h2>About VanshVoyages</h2>
+
+      <p class="small">
+        VanshVoyages is a boutique travel planner focused on designing approachable, well-paced trips.
+        We partner with trusted local providers to take care of logistics and provide clear support,
+        so you can focus on the experience.
+      </p>
+
+      <p class="small">
+        Our core commitments:
+        <ul>
+          <li>Practical itineraries that balance iconic sights with local culture.</li>
+          <li>Transparent pricing and clear pre-trip information.</li>
+          <li>Hands-on coordination so your plans run smoothly on the ground.</li>
+        </ul>
+      </p>
+
+      <p class="small">
+        Whether you're traveling solo, with friends, or in a small group, our aim is to make travel feel effortless and enjoyable.
+      </p>
+    </section>
+
+    <hr class="divider">
+
+    <!-- CONTACT -->
+    <section id="contact" class="wrap section">
+      <h2>Contact</h2>
+
+      <div class="contact-grid">
+        <div class="contact-box contact-box--dark">
+          <form id="contact-form" onsubmit="event.preventDefault(); alert('Demo: form not submitted');">
+            <label for="name">Your name</label>
+            <input id="name" type="text" placeholder="Full name" required>
+
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="you@example.com" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="Tell us travel dates, budget, preferences"></textarea>
+
+            <button class="btn" type="submit">Send Inquiry</button>
+          </form>
+        </div>
+
+        <aside class="contact-info contact-info--dark" aria-labelledby="contact-info-heading">
+          <h4 id="contact-info-heading" style="margin:0 0 10px 0;">Quick Contact</h4>
+          <p class="small">Created & maintained by: <strong>Vansh Negi</strong></p>
+          <p class="small">Phone: <strong>+91 7303828665</strong></p>
+          <p class="small">Email: <a href="mailto:vanshnegi1@yahoo.com">vanshnegi1@yahoo.com</a></p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-left">
+        <strong>VanshVoyages</strong>
+        <div class="small">© 2025 VanshVoyages — Created by Vansh Negi</div>
+      </div>
+      <div class="footer-right small">
+        Friendly, modern travel experiences.
+      </div>
+    </div>
+  </footer>
+
+  <!-- DETAILS / BOOK MODALS -->
+  <div id="modal-overlay" class="modal-overlay" aria-hidden="true">
+    <!-- Details modal -->
+    <div id="details-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="details-title">
+      <button class="modal-close" aria-label="Close details">&times;</button>
+      <h3 id="details-title">Package title</h3>
+      <p id="details-desc" class="muted"></p>
+
+      <div class="modal-grid">
+        <div>
+          <strong>Duration</strong>
+          <p id="details-duration" class="muted"></p>
+        </div>
+        <div>
+          <strong>Price</strong>
+          <p id="details-price" class="muted"></p>
+        </div>
+      </div>
+
+      <h4>Inclusions</h4>
+      <p id="details-includes" class="muted"></p>
+
+      <div style="margin-top:12px;">
+        <button class="btn book-from-details">Book this package</button>
+      </div>
+    </div>
+
+    <!-- Book modal -->
+    <div id="book-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="book-title">
+      <button class="modal-close" aria-label="Close booking">&times;</button>
+      <h3 id="book-title">Book — <span id="book-package-title"></span></h3>
+
+      <form id="booking-form">
+        <label for="bk-name">Full name</label>
+        <input id="bk-name" type="text" required>
+
+        <label for="bk-email">Email</label>
+        <input id="bk-email" type="email" required>
+
+        <label for="bk-phone">Phone</label>
+        <input id="bk-phone" type="tel" value="+91 " required>
+
+        <label for="bk-date">Preferred start date</label>
+        <input id="bk-date" type="date" required>
+
+        <label for="bk-notes">Notes (optional)</label>
+        <textarea id="bk-notes" rows="3"></textarea>
+
+        <div style="display:flex;gap:8px;margin-top:10px;">
+          <button class="btn" type="submit">Confirm Booking</button>
+          <button class="btn btn-sm outline" type="button" id="book-cancel">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Slow smooth scroll for anchor links
+    (function() {
+      const DURATION = 700;
+      function easeInOutCubic(t) { return t < 0.5 ? 4*t*t*t : 1 - Math.pow(-2*t + 2, 3) / 2; }
+      function scrollToTarget(targetY, duration) {
+        const startY = window.scrollY || window.pageYOffset;
+        const diff = targetY - startY;
+        let start;
+        function step(ts) {
+          if (!start) start = ts;
+          const time = ts - start;
+          const progress = Math.min(time / duration, 1);
+          const eased = easeInOutCubic(progress);
+          window.scrollTo(0, Math.round(startY + diff * eased));
+          if (time < duration) window.requestAnimationFrame(step);
+        }
+        window.requestAnimationFrame(step);
+      }
+      document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          const target = document.querySelector(href);
+          if (!target) return;
+          if (href === "#" || href === "") return;
+          e.preventDefault();
+          const rect = target.getBoundingClientRect();
+          const targetY = rect.top + window.scrollY - 18;
+          scrollToTarget(targetY, DURATION);
+        });
+      });
+    })();
+
+    // Modal logic
+    (function () {
+      const overlay = document.getElementById('modal-overlay');
+      const detailsModal = document.getElementById('details-modal');
+      const bookModal = document.getElementById('book-modal');
+
+      // open details when any .details-btn clicked
+      document.querySelectorAll('.details-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const title = btn.dataset.title;
+          const price = btn.dataset.price;
+          const duration = btn.dataset.duration;
+          const desc = btn.dataset.desc;
+          const includes = btn.dataset.includes;
+
+          document.getElementById('details-title').textContent = title;
+          document.getElementById('details-price').textContent = price;
+          document.getElementById('details-duration').textContent = duration;
+          document.getElementById('details-desc').textContent = desc;
+          document.getElementById('details-includes').textContent = includes;
+
+          overlay.style.display = 'block';
+          overlay.setAttribute('aria-hidden', 'false');
+          detailsModal.style.display = 'block';
+          bookModal.style.display = 'none';
+          trapFocus(detailsModal);
+        });
+      });
+
+      // open booking when any .book-btn clicked
+      document.querySelectorAll('.book-btn').forEach(btn => {
+        btn.addEventListener('click', () => openBookModal(btn.dataset.title));
+      });
+
+      // "Book this package" inside details
+      document.querySelectorAll('.book-from-details').forEach(b => {
+        b.addEventListener('click', () => {
+          const title = document.getElementById('details-title').textContent;
+          openBookModal(title);
+        });
+      });
+
+      // open book modal helper
+      function openBookModal(title) {
+        document.getElementById('book-package-title').textContent = title;
+        overlay.style.display = 'block';
+        overlay.setAttribute('aria-hidden', 'false');
+        bookModal.style.display = 'block';
+        detailsModal.style.display = 'none';
+        document.getElementById('bk-name').focus();
+        trapFocus(bookModal);
+      }
+
+      // close buttons
+      overlay.querySelectorAll('.modal-close').forEach(btn => {
+        btn.addEventListener('click', closeAll);
+      });
+
+      // click outside to close
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeAll();
+      });
+
+      // cancel booking button
+      document.getElementById('book-cancel').addEventListener('click', closeAll);
+
+      // booking form submit (demo)
+      document.getElementById('booking-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const pkg = document.getElementById('book-package-title').textContent;
+        const name = document.getElementById('bk-name').value;
+        const email = document.getElementById('bk-email').value;
+        const phone = document.getElementById('bk-phone').value;
+        const date = document.getElementById('bk-date').value;
+
+        // basic validation show message
+        if (!name || !email || !phone || !date) {
+          alert('Please complete all required fields.');
+          return;
+        }
+
+        // show confirmation (demo)
+        alert('Booking requested for ' + pkg + '\\nName: ' + name + '\\nEmail: ' + email + '\\nPhone: ' + phone + '\\nDate: ' + date + '\\n\\n(This is a demo confirmation — integrate a backend to store bookings.)');
+
+        // close modal
+        closeAll();
+        this.reset();
+      });
+
+      function closeAll() {
+        overlay.style.display = 'none';
+        overlay.setAttribute('aria-hidden', 'true');
+        detailsModal.style.display = 'none';
+        bookModal.style.display = 'none';
+      }
+
+      // Focus trap to keep keyboard in modal
+      function trapFocus(modal) {
+        const focusable = modal.querySelectorAll('a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])');
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        first.focus();
+
+        function handleKey(e) {
+          if (e.key === 'Tab') {
+            if (e.shiftKey && document.activeElement === first) {
+              e.preventDefault(); last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+              e.preventDefault(); first.focus();
+            }
+          } else if (e.key === 'Escape') {
+            closeAll();
+          }
+        }
+
+        modal.addEventListener('keydown', handleKey);
+        // cleanup: remove listener when modal closed
+        overlay.addEventListener('transitionend', function cleanup() {
+          modal.removeEventListener('keydown', handleKey);
+          overlay.removeEventListener('transitionend', cleanup);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
